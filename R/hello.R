@@ -15,5 +15,5 @@
 
 listAnnotations <- function() {
   data(WB.info)
-  knitr::kable(WB.info)
+  knitr::kable(info)
 }
