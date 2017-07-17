@@ -14,4 +14,7 @@
 #'
 #' @import rtracklayer GenomicRanges
 #' @importFrom knitr kable
+#'
+#' @exportPattern exportPattern("^[[:alpha:]]+")
+#'
 NULL
