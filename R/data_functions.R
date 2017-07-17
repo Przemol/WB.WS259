@@ -4,8 +4,8 @@
 #' @export
 #'
 listAnnotations <- function() {
-  data(WB.info)
-  knitr::kable(info)
+  get(load(system.file('extdata/info.rda', package = 'WB.WS259')))
+
 }
 
 
