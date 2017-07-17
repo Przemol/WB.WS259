@@ -12,10 +12,20 @@ listAnnotations <- function() {
 #' getBED
 #'
 #' @param x name of dataset to export
+#' @param chromosomes style to convert chromosomes names to, default to UCSC, leave blank for WB/Ensembl
 #' @return BED file
 #' @export
 #'
-getBED <- function(x) {
-  data(list=x)
-  export.bed(x, paste0(x, '.bed'))
+getBED <- function(x, chromosomes='UCSC') {
+  dat <- get(data(list=x))
+
+  if(nchar(chromosomes)) {
+    message('Converting ', seqlevelsStyle(dat), ' chromosome names to ', chromosomes, '.')
+    seqlevelsStyle(dat) <- chromosomes
+  }
+
+  message('Exporting ', length(dat), ' regions to ', getwd(), '/', paste0(x, '.bed'), ' file.')
+  export.bed(dat, paste0(x, '.bed'))
+
+  message('Done.')
 }

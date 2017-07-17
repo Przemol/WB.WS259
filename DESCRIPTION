@@ -1,9 +1,9 @@
 Package: WB.WS259
 Type: Package
-Title: WB genome annotations
+Title: WormBase genome annotations R package
 Version: 0.1.1
 Author: Przemyslaw Stempor
-Maintainer: Przemyslaw Stempor
+Maintainer: Przemyslaw Stempor <ps562@cam.ac.uk>
 Description: Annotation package from WormBase
 License: WB
 Encoding: UTF-8
